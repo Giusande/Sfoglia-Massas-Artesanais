@@ -214,13 +214,13 @@ input::placeholder{
     }
 
     .product h3{
-        font-size: 12px;
+        font-size: 10px;
         margin-bottom: 5px;
     }
 
     .product h4{
         position: relative;
         top: 10px;
-        font-size: 15px;
+        font-size: 10px;
     }
 }
