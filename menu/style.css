@@ -70,7 +70,7 @@ header .busca-insta a{
     top: 100px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 999;
+    z-index: 998;
 }
 
 .busca input{
@@ -79,7 +79,7 @@ header .busca-insta a{
     border-left: none;
     border-right: none;
     padding: 5px;
-    width: 200px;
+    width: 180px;
     color: #7F2121;
     outline: none;
 }
