@@ -187,6 +187,9 @@ hr{
 }
 
 @media (max-width: 950px) {
+    header .navbar{
+        display: none;
+    }
     .apresent{
         flex-direction: column-reverse;
         padding: 50px;
