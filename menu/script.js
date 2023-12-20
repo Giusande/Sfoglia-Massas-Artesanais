@@ -133,7 +133,7 @@ const products = [
   }
 
   function ifood() {
-    window.location.href = "https://www.ifood.com.br/delivery/recife-pe/sfoglia-massas-artesanais-varzea/"
+    window.location.href = "https://www.ifood.com.br/delivery/recife-pe/sfoglia-massas-artesanais-varzea/2f66d94e-8da0-410e-90ff-32312fcf2db0?UTM_Medium=share"
   }
 
   var xc = document.querySelector('#productDetails .bx-x');
