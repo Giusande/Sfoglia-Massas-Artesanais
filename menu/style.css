@@ -298,7 +298,6 @@ input::placeholder{
         flex-direction: column;
         overflow-y: scroll;
         padding: 20px 10px 10px 10px;
-        height: 80vh;
     }
       
     .details-desc{
