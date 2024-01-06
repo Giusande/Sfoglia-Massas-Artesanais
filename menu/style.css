@@ -226,7 +226,6 @@ input::placeholder{
     100% { transform: rotate(360deg); }
   }
   
-  /* Estilos para a animação de carregamento */
   .loader {
     border: 4px solid rgba(0, 0, 0, 0.1);
     border-top: 4px solid #333;
@@ -333,9 +332,9 @@ footer p{
         position: fixed;
         bottom: 0;
         width: 100%;
-        height: 70px;
+        height: 50px;
         background: #ffffff;
-        box-shadow: 0 0 2px #000;
+        box-shadow: 0 0 1rem #dedede;
         z-index: 200;
     }
 
@@ -351,16 +350,17 @@ footer p{
     }
 
     .mobile ul li a i{
-        font-size: 25px;
+        font-size: 20px;
         color: #7F2121;
     }
 
     .mobile ul li a p{
         color: #000;
+        font-size: 12px;
     }
 
     footer{
-        margin-bottom: 70px;
+        margin-bottom: 50px;
         margin-top: 150px;
     }
 
