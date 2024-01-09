@@ -7,20 +7,23 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+:root{
+    --color-cizinha: #dedede;
+    --color-pricipal: #7F2121;
+    --color-black: #000000;
+    --color-white: #ffffff;
+}
+
 header{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    box-shadow: 0 0 1em #dedede;
+    box-shadow: 0 0 1em var(--color-cizinha);
     width: 100%; 
     height: 60px;
     position: fixed;
-    background: #ffffff;
+    background: var(--color-white);
     z-index: 999;
-}
-
-header .bx-menu{
-    display: none;
 }
 
 header img{
@@ -43,20 +46,34 @@ header nav ul li{
 }
 
 header nav ul li a{
-    color: #7F2121;
+    color: var(--color-pricipal);
+}
+
+@keyframes click{
+    0%{
+        transform: scale(0.8);
+    }
+
+    100%{
+        transform: scale(1.1);
+    }
 }
 
 header nav ul li:hover{
-    background: #7F2121;
+    background: var(--color-pricipal);
+}
+
+header nav ul li:active{
+    animation: click .7s;
 }
 
 header nav ul li:hover a{
-    color: #ffffff;
+    color: var(--color-white);
 }
 
 header .busca-insta a{
-    color: #ffffff;
-    background: #7F2121;
+    color: var(--color-white);
+    background: var(--color-pricipal);
     padding: 4px 7px;
     border-radius: 100px;
 }
@@ -74,20 +91,20 @@ header .busca-insta a{
 
 .apresent .desc h1{
     font-size: 58px;
-    text-align: justify;
+    text-align: center;
 }
 
 .apresent .desc p{
     font-size: 15px;
-    text-align: justify;
+    text-align: center;
 }
 
 .apresent .desc button{
     padding: 5px 10px;
     border: none;
-    background: #7F2121;
+    background: var(--color-pricipal);
     border-radius: 20px;
-    color: #ffffff;
+    color: var(--color-white);
     margin-left: 50%;
     margin-top: 30px;
     transform: translatex(-50%);
@@ -105,9 +122,9 @@ header .busca-insta a{
 .pratos button{
     padding: 5px 10px;
     border: none;
-    background: #7F2121;
+    background: var(--color-pricipal);
     border-radius: 20px;
-    color: #ffffff;
+    color: var(--color-white);
     margin-left: 50%;
     margin-top: 30px;
     transform: translatex(-50%);
@@ -116,7 +133,7 @@ header .busca-insta a{
 
 .pratos h1{
     text-align: center;
-    color: #7F2121;
+    color: var(--color-pricipal);
     font-size: 30px;
     margin-bottom: 40px;
 }
@@ -132,7 +149,7 @@ header .busca-insta a{
     display: flex;
     height: 100px;
     padding: 10px;
-    border: 1px solid #dedede;
+    border: 1px solid var(--color-cizinha);
     border-radius: 5px;
 }
 
@@ -157,7 +174,7 @@ header .busca-insta a{
 
 .sobre h1{
     text-align: center;
-    color: #7F2121;
+    color: var(--color-pricipal);
     font-size: 30px;
     margin-bottom: 40px;    
 }
@@ -174,9 +191,9 @@ header .busca-insta a{
 .sobre .sobre-content button{
     padding: 5px 10px;
     border: none;
-    background: #7F2121;
+    background: var(--color-pricipal);
     border-radius: 20px;
-    color: #ffffff;
+    color: var(--color-white);
     margin-left: 50%;
     margin-top: 30px;
     transform: translatex(-50%);
@@ -199,7 +216,7 @@ hr{
 footer{
     width: 100%;
     height: 60px;
-    background: #7F2121;
+    background: var(--color-pricipal);
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -211,7 +228,7 @@ footer img{
 }
   
 footer p{
-   color: #ffffff;
+   color: var(--color-white);
    font-size: 12px;
 }
 
@@ -284,8 +301,8 @@ footer p{
         bottom: 0;
         width: 100%;
         height: 50px;
-        background: #ffffff;
-        box-shadow: 0 0 1rem #dedede;
+        background: var(--color-white);
+        box-shadow: 0 0 1rem var(--color-cizinha);
         z-index: 200;
     }
 
@@ -301,13 +318,14 @@ footer p{
     }
 
     .mobile ul li a i{
-        font-size: 20px;
-        color: #7F2121;
+        font-size: 25px;
+        color: var(--color-pricipal);
     }
 
     .mobile ul li a p{
-        color: #000;
-        font-size: 12px;
+        color: var(--color-black);
+        font-size: 10px;
+        margin-top: -3px;
     }
 
     footer{
@@ -319,7 +337,7 @@ footer p{
     }
       
     footer p{
-       color: #ffffff;
+       color: var(--color-white);
        font-size: 8px;
     }
 }

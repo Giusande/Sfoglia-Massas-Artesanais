@@ -81,6 +81,14 @@ const products = [
       resultsDiv.appendChild(productDiv);
     });
   }
+
+  const searchInput = document.getElementById("searchInput");
+  searchInput.addEventListener("keyup", function(event) {
+    if (event.key === "Enter") {
+      search();
+    }
+  });
+
   
   function search() {
     const searchTerm = document.getElementById("searchInput").value.toLowerCase();
