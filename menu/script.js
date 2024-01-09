@@ -117,7 +117,7 @@ const products = [
         });
         footer.classList.remove("search-funcion");
       }
-      if (filteredProducts.length <= 4) {
+      if (filteredProducts.length <= 3) {
         footer.classList.add("search-funcion");
       }
     }, 2000)
