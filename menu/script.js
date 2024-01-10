@@ -7,7 +7,7 @@ const products = [
     },
     { 
         name: "RAVIÓLI 3 QUEIJOS AO MOLHO POMODORO", 
-        descricao: "Massa fresca recheada com uma mistura irresistível de queijos, regada ao delicioso molho pomodoro.", 
+        descricao: "Ravióli 3 queijos ao molho pomorodo, é uma massa fresca recheada com uma mistura irresistível de queijos, regada ao delicioso molho pomodoro.", 
         price: "28,00", 
         imageUrl: "../imagens/2.avif"
     },
@@ -19,7 +19,7 @@ const products = [
     },
     { 
         name: "FETTUCCINE À CARBONARA COM CHARQUE", 
-        descricao: "Queijo parmesão, ovos, charque em cubos e fettuccine artesanal.", 
+        descricao: "Fettuccine à carbonara com charque é um prato com queijo parmesão, ovos, charque em cubos e fettuccine artesanal.", 
         price: "33,00", 
         imageUrl: "../imagens/4.avif"
     },
@@ -126,32 +126,10 @@ const products = [
   showAllProducts();
 
   function showProductDetails(product) {
-    const detailsContent = document.getElementById("detailsContent");
-    detailsContent.innerHTML = `
-    <img src="${product.imageUrl}" alt="${product.name}">
-    <div class="details-desc">
-      <h1>${product.name}</h1>
-      <p>${product.descricao}</p>
-      <div class="price-bnt">
-        <p class="preco">R$ ${product.price}</p>
-        <button onclick="ifood()">Comprar</button>
-      </div>
-    </div>
-    `;
-    const productDetails = document.getElementById("productDetails");
-    productDetails.style.display = "block";
+    localStorage.setItem('productDetails', JSON.stringify(product));
+    window.location.href = 'product-details.html';
   }
-
-  function ifood() {
-    window.location.href = "https://www.ifood.com.br/delivery/recife-pe/sfoglia-massas-artesanais-varzea/2f66d94e-8da0-410e-90ff-32312fcf2db0?UTM_Medium=share"
-  }
-
-  var xc = document.querySelector('#productDetails .bx-x');
-
-  xc.onclick = () => {
-    productDetails.style.display = "none";
-  };
-
+  
   function createProductElement(product) {
     const productDiv = document.createElement("div");
     productDiv.classList.add("product");
@@ -162,7 +140,11 @@ const products = [
     productDiv.appendChild(productImage);
   
     const productInfo = document.createElement("div");
-    productInfo.innerHTML = `<div class="name-desc"><h3>${product.name}</h3> <p>${product.descricao}</p></div> <h4>R$ ${product.price}</h2>`;
+    productInfo.innerHTML = `
+    <h1>${product.name}</h1>
+    <p>${product.descricao}</p>
+    <h2>R$ ${product.price} - <p>(200g)<p></h2>
+    `;
     productDiv.appendChild(productInfo);
   
     productDiv.addEventListener("click", () => {
