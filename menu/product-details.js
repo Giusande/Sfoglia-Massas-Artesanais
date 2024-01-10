@@ -7,7 +7,7 @@ if (productDetails) {
     <img src="${productDetails.imageUrl}" alt="${productDetails.name}">
     <div class="details-desc">
       <h1>${productDetails.name}</h1>
-      <p class="peso">(200g)</p>
+      <p class="peso">(${productDetails.peso})</p>
       <p class="preco">R$ ${productDetails.price}</p>
       <hr>
       <button class="comprar" onclick="ifood()">Comprar</button>

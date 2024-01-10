@@ -145,6 +145,14 @@ header .busca-insta a{
     border-radius: 5px;
     color: var(--color-green);
     font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#detailsContent .details-desc .whatsapp i{
+    font-size: 18px;
+    margin-right: 5px;
 }
 
 #detailsContent .details-desc .desc{
